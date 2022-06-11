@@ -142,6 +142,22 @@
             bottom: 0;
 
         }
+        #race > h2{
+            width: 100%;
+            text-align: center;
+            padding: 1em 0 0 0;
+            font-size: xx-large;
+            color: #3aff3a;
+            font-size: 48px;
+            font-weight: 500;
+        font-style: normal;
+        }
+            
+        #race > p {
+            text-align: center;
+            padding: 2em 0 0 0;
+            font-size: 28px;
+        }
         #theme{
             width:100% ;
             display: flex;
@@ -172,6 +188,7 @@
             justify-content: center;
             padding: 10em 2em 5em;
         }
+        
         #service img{
             width: 100%;
             vertical-align: bottom;
