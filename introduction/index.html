@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" >
+    <style>
+    *{
+        list-style: none;
+        box-sizing: border-box;
+        padding:0;
+        margin: 0;
+        text-decoration: none;
+
+    }
+ 
+    body{
+        background-color: #E78033;
+    }
+   
+    h1 span{
+        display: inline-block;
+            width: 1.8em;
+            height: 1.8em;
+            background-color: white;
+            color:#E78033;
+            text-align: center;
+            line-height: 1.8em;
+            border-radius: 50%;
+            margin-right: 0.3em;
+            transition: all 500ms ease;
+    }
+    h1 a{
+        color: white;
+        font-family: sans-serif;
+        font-weight: 900;
+    }
+    .grid-4{
+        width: calc(100% / 12 * 4);
+    }
+    #service{
+            width: 100%;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            padding: 10em 2em 5em;
+    }
+    #service img{
+            width: 100%;
+            vertical-align: bottom;
+        }
+    #service .grid-4{
+        padding: 1.5em;
+        }
+    #service .grid-4 .box{
+            position: relative;
+            overflow: hidden;
+        }    
+        #service .grid-4 .box .img{
+            display: block;
+            margin: auto;
+            transition: all 500ms ease;
+        }
+        #service .grid-4 .box .push{
+            position: absolute;
+            text-align: center;
+            top: 43%;
+            left: 43%;
+            z-index: 10;
+            font-size: 24px;
+            background-color: rgb(0, 132, 255);
+            display: none;
+            transition: all 500ms ease;
+            font-family: sans-serif ;
+            color: white;
+            font-weight: 900; 
+            padding: 0.5em;
+                  
+        }
+      
+        #service .grid-4 .box:hover .push{
+            display: block;
+            
+            
+        }
+        #service .grid-4 .box:hover img{
+            opacity: 0.4;
+
+        }
+    </style>
+</head>
+
+<body>
+    <h1><a href="../index.html">回到主頁</a><span><i class="fa-solid fa-right-from-bracket"></i></span></h1>
+    
+    </div>
+<div id="service">
+<div class="grid-4">
+    <div class="box">
+        <img  src="../png/1.png" > 
+        <p class="push">MORE</p>
+        
+    </div>
+</div>
+<div class="grid-4">
+    <div class="box">
+        <img  src="../png/5.png" > 
+        <p class="push">MORE</p>
+    </div>
+</div>
+<div class="grid-4">
+    <div class="box">
+        <img  src="../png/10.png"> 
+        <p class="push">MORE</p>
+    </div>
+</div>
+<div class="grid-4">
+    <div class="box">
+        <img  src="../png/12.png" > 
+            <p class="push">MORE</p>
+    </div>
+</div>
+<div class="grid-4">
+    <div class="box">
+        <img  src="../png/13.png" > 
+        <p class="push">MORE</p>
+    </div>
+</div>
+<div class="grid-4">
+    <div class="box">
+        <img  src="../png/14.png" > 
+        <p class="push">MORE</p>
+    </div>
+</div>
+
+</div>
+
+</body>
+</html>
+<script>
+
+</script>
