@@ -74,19 +74,19 @@
             width: 100%;
             vertical-align: bottom;
         }
-    #service .grid-4{
+    #service .grid-12{
         padding: 1.5em;
         }
-    #service .grid-4 .box{
+    #service .grid-12 .box{
             position: relative;
             overflow: hidden;
         }    
-        #service .grid-4 .box .img{
+        #service .grid-12 .box .img{
             display: block;
             margin: auto;
             transition: all 500ms ease;
         }
-        #service .grid-4 .box *[class ^=push]{
+        #service .grid-12 .box *[class ^=push]{
             position: absolute;
             text-align: center;
             top: 43%;
@@ -103,11 +103,11 @@
                   
         }
       
-        #service .grid-4 .box:hover *[class ^=push]{
+        #service .grid-12 .box:hover *[class ^=push]{
             display: block;
             cursor: pointer; 
               }
-        #service .grid-4 .box:hover img{
+        #service .grid-12 .box:hover img{
             opacity: 0.4;
 
         }
@@ -128,4 +128,19 @@
             padding: 3em 0 ;
             text-align: center;
         }
-    
+        @media only screen and (min-width:1024px){
+       
+            .grid-m-6{
+                width: calc(100% / 12 * 6);
+            }
+            
+        
+    }
+    @media only screen and (min-width:1200px){
+       
+            .grid-l-4{
+                width: calc(100% / 12 * 4);
+            }
+            
+        
+    }
