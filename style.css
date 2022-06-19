@@ -15,9 +15,26 @@
             --contentText:#323232 ;
 
         }
+        *[class^=btn]{
+            padding: 0.5em 1.2em;
+            text-align: center;
+            font-weight: 900;
+            display: inline-block;
+            filter: brightness(0.7);
+            transition: all 500ms ease;
+            margin: 0.5em 0;
+        }
+        *[class^=btn]:hover{
+            filter: brightness(1);
+        }
+        .btn-theme{
+            background-color: #7fb4ff;
+            color: white;
+        }
         body{
             background-color: var(--themeColor);
         }
+        
         .grid-1{
             width: calc(100% / 12 * 1);
         }
@@ -159,33 +176,20 @@
             bottom: 0;
 
         }
-        #race > h2{
-            width: 100%;
-            text-align: center;
-            padding: 1em 0 0 0;
-            font-size: xx-large;
-            color: #3aff3a;
-            font-size: 48px;
-            font-weight: 500;
-        font-style: normal;
-        }
-            
-        #race > p {
-            text-align: center;
-            padding: 2em 0 0 0;
-            font-size: 28px;
-        }
+        
         #theme{
             width:100% ;
             display: flex;
             flex-wrap: nowrap;
             justify-content: center;
-            padding-top: 8em;
+            padding-top: 0.5em;
+            padding-bottom: 10em;
             
         }
         #theme .grid-m-8{
            text-align: center;
            color: var(--titleText);
+           
         }
         #theme .grid-m-8 h2{
             font-size: 2.2rem;
@@ -198,57 +202,81 @@
         #theme .grid-m-8 hr{
             margin: 1em 0 2em; 
         }
-        #service{
-            width: 100%;
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-            padding: 10em 2em 5em;
-        }
-        
-        #service img{
-            width: 100%;
-            vertical-align: bottom;
-        }
-        #service .grid-12{
-        padding: 1.5em;
-        }
-        #service .grid-12 .box{
+        #photo{
+            width: 90%; 
+            height: 200vh;
+            margin: auto;
             position: relative;
-            overflow: hidden;
         }
-        #service .grid-12 .box a{
+        #photo .push{
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: var(--pushColor);
+            color: #FFF;
+            padding: 50% 1em;
+            z-index: 11;
+        }
+        #photo .push h2{
+            font-size: 4em;
+        }
+        #slide{
+            width: 100%;
+            height: 200vh ;
+            overflow: hidden;
+            position: relative;
+            text-align: center;
+        }
+        #slide .img{
             display: block;
             width: 100%;
-            height: 4em;
-            line-height: 4em;
+            height: 100%;
+            overflow: hidden;
             text-align: center;
-            background-color: #000000;
-            color: white;
             position: absolute;
-            bottom : -4em ;
-            transition: all 500ms  cubic-bezier(0.34,1.56,0.64,1) ;
+            top: 0;
+            left: 100%;
+            animation: sliding 25s linear infinite;
         }
-        #service .grid-12 .box:hover .push{
-            bottom :0;
-
+        #slide .img img{
+            width: auto;
+            height: 100%;
         }
-        #service.grid-12.p{
-            text-align: justify ;
-
+        #slide .img:nth-of-type(2){
+            animation-delay: 5s;
         }
-        #service >p{
-            text-align: center ;
-            padding: 3em 0 0;
-
+        #slide .img:nth-of-type(3){
+            animation-delay: 10s;
         }
-        #service > p a{
-            background-color: var(--themeColor);
-            color: white;
-            padding: 1em 4em;
-            border-radius: 0.5em;
-            font-size: 18px;
-            font-weight: 900;
+        #slide .img:nth-of-type(4){
+            animation-delay: 15s;
+        }
+        #slide .img:nth-of-type(5){
+            animation-delay: 20s;
+        }
+        @keyframes sliding{
+            0%{
+                transform: translate(0);
+                z-index: 10;
+            }
+            4%{
+                transform: translate(-100%);
+                z-index: 10;
+            }
+            20%{
+                transform: translate(-100%);
+                z-index: 10;
+            }
+            24%{
+                transform: translate(-200%);
+                z-index: 10;
+            }
+            25%{
+                transform: translate(0);
+                z-index: 1;
+            }
         }
         footer{
             width: 100%;
@@ -293,11 +321,13 @@
         .grid-m-12{
             width: calc(100% / 12 * 12);
         }
-
-        #service{
-                 padding: 10em 5em 5em;
-             }
-       
+        #photo .push{
+            padding: 20% 2em;
+        }
+        #slide .img img{
+            width: 100%;
+            height: auto;
+        }
         }
         @media only screen and (min-width:1200px){
         .grid-l-1{
@@ -359,9 +389,6 @@
                     display: none;
 
 
-             }
-             #service{
-                 padding: 10em 10em 5em;
              }
         }
    
